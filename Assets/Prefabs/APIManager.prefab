@@ -1,0 +1,334 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8098559901576395180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8098559901576395177}
+  - component: {fileID: 8098559901576395182}
+  - component: {fileID: 8098559901576395183}
+  - component: {fileID: 8098559901576395176}
+  - component: {fileID: 8098559901576395179}
+  - component: {fileID: 1169853634990929887}
+  - component: {fileID: -2530967928278862884}
+  - component: {fileID: 1740364271426477802}
+  - component: {fileID: 737793754}
+  - component: {fileID: 5501933780569951084}
+  - component: {fileID: 8394511132527421016}
+  - component: {fileID: 991784198849333310}
+  - component: {fileID: 23334163023832896}
+  - component: {fileID: 3912635984960162251}
+  - component: {fileID: 4242534568036503309}
+  m_Layer: 0
+  m_Name: APIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8098559901576395177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8098559901576395182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c2b39f6d3b10f46aa0f56257d85f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiError: {fileID: 0}
+  getUserDataRequest: {fileID: 1169853634990929887}
+  getCategoriesRequest: {fileID: 8098559901576395183}
+  getTextsRequest: {fileID: 8098559901576395176}
+  getGiftRequestsRequest: {fileID: 737793754}
+  getGiftMessagesRequest: {fileID: 5501933780569951084}
+  getSentMessagesRequest: {fileID: 3912635984960162251}
+  getStickersRequest: {fileID: 23334163023832896}
+  postGiftRequest: {fileID: 8098559901576395179}
+  postRegisterUserRequest: {fileID: -2530967928278862884}
+  postMessageThankRequest: {fileID: 1740364271426477802}
+  postMessageSeenRequest: {fileID: 8394511132527421016}
+  postThankedSeenRequest: {fileID: 4242534568036503309}
+  postGiftSendRequest: {fileID: 991784198849333310}
+  DataTextCategories: []
+  DataTexts: []
+  DataRequests: []
+  DataReceivedMessages: []
+  DataSentMessages: []
+  DataStickers: []
+  OnMessagesRefreshed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRequestsRefreshed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAPIError:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8098559901576395183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/categories
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 0
+  AuthToken: 
+--- !u!114 &8098559901576395176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/categories/:id/texts
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 0
+  AuthToken: 
+--- !u!114 &8098559901576395179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 1
+  Uri: http://84.26.114.127:8000/request
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &1169853634990929887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/authenticate
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &-2530967928278862884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 1
+  Uri: http://84.26.114.127:8000/users/register
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 0
+  AuthToken: 
+--- !u!114 &1740364271426477802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/messages/:id/thank
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &737793754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/request
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 0
+  AuthToken: 
+--- !u!114 &5501933780569951084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/messages
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &8394511132527421016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/messages/:id/seen
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &991784198849333310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 1
+  Uri: http://84.26.114.127:8000/request/:id
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &23334163023832896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/stickers
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 0
+  AuthToken: 
+--- !u!114 &3912635984960162251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/messages/sent
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
+--- !u!114 &4242534568036503309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098559901576395180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f552eaddb823d4ebf6233319ecfddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Method: 0
+  Uri: http://84.26.114.127:8000/users/messages/sent/thank/seen
+  OnRequestFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  IncludeDeviceUniqueIDAsAuthToken: 1
+  AuthToken: 
